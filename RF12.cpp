@@ -403,7 +403,7 @@ uint8_t rf12_initialize (uint8_t id, uint8_t band, uint8_t g) {
         
     rf12_xfer(0x80C7 | (band << 4)); // EL (ena TX), EF (ena RX FIFO), 12.0pF 
     rf12_xfer(0xA640); // 868MHz 
-    rf12_xfer(0xC606); // approx 49.2 Kbps, i.e. 10000/29/(1+6) Kbps
+    rf12_xfer(0xC691); // approx 49.2 Kbps, i.e. 10000/29/(1+6) Kbps
     rf12_xfer(0x94A2); // VDI,FAST,134kHz,0dBm,-91dBm 
     rf12_xfer(0xC2AC); // AL,!ml,DIG,DQD4 
     if (group != 0) {
